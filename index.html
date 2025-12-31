@@ -3,49 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quick Panel</title>
-
+<title>adjustment｜Quick Access</title>
 <style>
-  body {
-    margin: 0;
-    background: #111;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  :root{
+    --bg:#111;
+    --card:#1e1e1e;
+    --text:#fff;
+    --muted:#aaa;
+    --accent:#2dd4bf;
+    --radius:14px;
   }
 
-  .panel {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100vh;
   }
 
-  a {
-    display: block;
-    text-decoration: none;
-    background: #1e1e1e;
-    color: #fff;
-    text-align: center;
-    padding: 22px 0;
-    font-size: 22px;
-    border-radius: 12px;
+  .container{
+    width:92%;
+    max-width:520px;
+    margin:24px 0;
   }
 
-  a:active {
-    background: #333;
+  .block{
+    background:var(--card);
+    border-radius:var(--radius);
+    margin-bottom:16px;
+    overflow:hidden;
   }
+
+  .block-header{
+    padding:18px 20px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .block-header span{
+    color:var(--muted);
+    font-size:16px;
+  }
+
+  .block-content{
+    display:none;
+    padding:0 20px 18px 20px;
+  }
+
+  .block-content a{
+    display:block;
+    text-decoration:none;
+    color:var(--text);
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    font-size:16px;
+  }
+
+  .block-content a:last-child{
+    border-bottom:none;
+  }
+
+  .block-content a:active{
+    color:var(--accent);
+  }
+
+  .block.active .block-content{
+    display:block;
+  }
+  footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin:32px 0 12px;
+  opacity:0.8;
+}
+footer span{
+  display:block;
+}
 </style>
 </head>
-
 <body>
-  <div class="panel">
-    <a href="https://chat.openai.com" target="_blank">🧠 ChatGPT</a>
-    <a href="https://github.com" target="_blank">💻 GitHub</a>
-    <a href="https://adjustment.jp" target="_blank">📐 adjustment-lab</a>
-    <a href="https://www.notion.so" target="_blank">📄 メモ / 設計</a>
+<div class="container">
+  <!-- トレーニングプログラム管理 -->
+  <div class="block">
+    <div class="block-header">
+      ▶ トレーニングプログラム管理
+      <span>＋</span>
+    </div>
+    <div class="block-content">
+      <a href="https://adjustment-commits.github.io/fkk-6-kubo/" target="_blank">FKK #6</a>
+      <a href="https://adjustment-commits.github.io/fkk-8-tr-2025-2026/" target="_blank">FKK #8</a>
+      <a href="https://adjustment-commits.github.io/fkk-14-fujiwara/" target="_blank">FKK #14</a>
+      <a href="https://adjustment-commits.github.io/fkk-25-tr-2025-2026/" target="_blank">FKK #25</a>
+      <a href="https://adjustment-commits.github.io/fkk-27-tr-2025-2026/" target="_blank">FKK #27</a>
+      <a href="https://adjustment-commits.github.io/pitcher-training-2025/" target="_blank">投手トレーニング 2025</a>
+      <a href="https://adjustment-commits.github.io/fkk-pitcher-tr-2026/" target="_blank">投手トレーニング 2026</a>
+    </div>
   </div>
+  <!-- 評価・チェック -->
+  <div class="block">
+    <div class="block-header">
+      ▶ 評価・チェック
+      <span>＋</span>
+    </div>
+    <div class="block-content">
+      <a href="https://adjustment-commits.github.io/physical-performance-test/" target="_blank">フィジカルテスト</a>
+      <a href="https://adjustment-commits.github.io/self-check-app/" target="_blank">セルフチェック</a>
+      <a href="https://adjustment-commits.github.io/blast-record-jhs/" target="_blank">BLAST数値（中学生）</a>
+      <a href="https://adjustment-commits.github.io/evaluation-sheet2025/" target="_blank">セミパーソナル計測</a>
+      <a href="https://adjustment-commits.github.io/pitcher-s-appropriateness/" target="_blank">Running Fitness</a>
+      <a href="https://adjustment-commits.github.io/medical-check-2025-2026/" target="_blank">メディカルチェック</a>
+    </div>
+  </div>
+  <!-- 教材・構造 -->
+  <div class="block">
+    <div class="block-header">
+      ▶ 教材・構造
+      <span>＋</span>
+    </div>
+    <div class="block-content">
+      <a href="https://adjustment-commits.github.io/pitcher-vo2max/" target="_blank">VO2max</a>
+      <a href="https://adjustment-commits.github.io/catcher-physical-structure-e-ra/" target="_blank">捕手フィジカル構造</a>
+      <a href="https://adjustment-commits.github.io/training-for-h-s-b-2025/" target="_blank">中3 高校対策トレーニング</a>
+      <a href="https://adjustment-commits.github.io/training-for-h-s-b-2025-memo/" target="_blank">中3 高校対策メモ</a>
+      <a href="https://adjustment-commits.github.io/namerikawacity-2025/" target="_blank">滑川市 講習会</a>
+      <a href="https://adjustment-commits.github.io/4types-of-drinking/" target="_blank">飲酒量チェッカー</a>
+    </div>
+  </div>
+  <!-- ブランド -->
+  <div class="block">
+    <div class="block-header">
+      ▶ ブランド
+      <span>＋</span>
+    </div>
+    <div class="block-content">
+      <a href="http://adjustment.jp/" target="_blank">整-adjustment-</a>
+    </div>
+  </div>
+  <footer>
+<span>© 整-adjustment-</span>
+<span>quick access</span>
+  </footer>  
+</div>
+<script>
+  const blocks = document.querySelectorAll('.block');
+
+  blocks.forEach(block => {
+    block.querySelector('.block-header').addEventListener('click', () => {
+      blocks.forEach(b => {
+        if (b !== block) b.classList.remove('active');
+      });
+      block.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>
