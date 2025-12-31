@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Panel</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .panel {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    background: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 22px 0;
+    font-size: 22px;
+    border-radius: 12px;
+  }
+
+  a:active {
+    background: #333;
+  }
+</style>
+</head>
+
+<body>
+  <div class="panel">
+    <a href="https://chat.openai.com" target="_blank">🧠 ChatGPT</a>
+    <a href="https://github.com" target="_blank">💻 GitHub</a>
+    <a href="https://adjustment.jp" target="_blank">📐 adjustment-lab</a>
+    <a href="https://www.notion.so" target="_blank">📄 メモ / 設計</a>
+  </div>
+</body>
+</html>
